@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>음성 05</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #f7f7f7;
+    }
+
+    button {
+      font-size: 28px;          /* 글자 크게 */
+      padding: 28px 56px;       /* 버튼 자체 크게 */
+      border-radius: 16px;
+      border: none;
+      background: #000;
+      color: #fff;
+      cursor: pointer;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    }
+
+    button:active {
+      transform: scale(0.96);
+    }
+  </style>
+</head>
+
+<body>
+
+  <button onclick="play()">▶ 음성 재생</button>
+
+  <audio id="audio" src="../audio/05.mp3" preload="auto"></audio>
+
+  <script>
+    function play() {
+      const audio = document.getElementById("audio");
+      audio.currentTime = 0;
+      audio.play();
+    }
+  </script>
+
+</body>
+</html>
